@@ -15,15 +15,20 @@ def square(t, angle, length):
 
 square(bob, 90, 10)
 
-# Tells a turtle to draw a n-sided polygon
+def polyline(t, n, length, angle):
+	for i in range(n):
+	        fd(t, length)
+	        lt(t, angle)
+
+# Tells a turtle to draw an n-sided polygon
 def polygon(t, length, n):
 	angle = 360/n
+	#could replace the next 3 lines with polyline()
 	for i in range(n):
 		fd(t, length)
 		lt(t, angle)
 		
 polygon(bob, 50, 8)
-
 
 
 wait_for_user()					
